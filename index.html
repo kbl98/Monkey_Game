@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocumentBattle of Heroes</title>
+    <link
+    rel="icon"
+    type="image/vnd.microsoft.icon"
+    href="https://dr-katja-becker-lindhorst.developerakademie.net/favicon/favicon.ico"
+  />
+    <link rel="stylesheet" href="style.css">
+    <script src="js/levels/images.js"></script>
+    <script src="js/classes/drawableObject.class.js"></script>
+    <script src="js/classes/moveableObject.class.js"></script>
+    <script src="js/classes/statusbar.class.js"></script>
+    <script src="js/classes/coinbar.class.js"></script>
+    <script src="js/classes/coins.class.js"></script>
+    <script src="js/classes/bomb.class.js"></script>
+    <script src="js/classes/weapon.class.js"></script>
+    <script src="js/classes/character.class.js"></script>
+    <script src="js/classes/enemy.class.js"></script>
+    <script src="js/classes/bgobjects.class.js"></script>
+    <script src="js/classes/clouds.class.js"></script>
+    <script src="js/classes/keyboard.class.js"></script>
+    <script src="js/classes/level.class.js"></script>
+    <script src="js/classes/endboss.class.js"></script>
+    <script src="js/classes/endbossWeapon.class.js"></script>
+    
+
+    <script src="js/classes/endscreen.class.js"></script>
+    <script src="js/classes/ball.class.js"></script>
+    <script src="js/classes/world.class.js"></script>
+    <script src="js/levels/level_1.js"></script>
+    <script src="js/game.js"></script>
+
+
+</head>
+<body onload="">
+        <p id="heading" class=""> Wuhang`s Battle</p>
+        <div id="startpage" class="start" >
+            <img src="../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Characters/Characters 04/Walk/Walk_00.png" id="enemy-img">
+            <img src="../img/craftpix-net-546825-monkey-game-character-sprite/PNG/Walk/Wukong-Walk_0.png" id="monkey-img">
+            <img src="../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Characters/Characters 02/Walk/Walk_00.png" id="boss-img">
+         
+           
+           
+            <button class="button" onclick="removeStartDisplay(),init()" id="start" >Start game</button>
+        </div>
+       
+       
+ 
+
+   <div id="canvas-frame" class="d-none">
+    <canvas id="canvas" width="720" height="480" class="">
+       
+    </canvas>
+
+    <div id="pause-cont">
+        <div class="movebutton" id="pause" >||</div>
+        <div class="movebutton" id="play" >Play</div>
+    </div>
+
+   <div class="movebutton-cont">
+    <div class="cont-side">
+        <div class="movebutton" id="left">Left</div>
+        <div class="movebutton" id="up">Up</div>
+        
+    </div>
+
+    <div class="movebutton" id="space" >THROW</div>
+    <div class="cont-side">
+        <div class="movebutton" id="down">Down</div>
+        <div class="movebutton" id="right">Right</div>
+        
+       
+    </div>
+    </div>
+</div>
+
+<div id="info-play">
+    Erklärung der Steuerung:
+     <br> LEFT: Pfeiltaste links <br> RIGHT: Pfeiltaste rechts  <br>
+    UP: Pfeiltaste nach oben<br>Einsammeln: Pfeiltaste nach unten<br>Pause:"p" <br>Werfen: Spacetaste;
+</div>
+
+    
+    
+</body>
+</html>
