@@ -5,7 +5,7 @@ class Character extends MoveableObject {
   speed = 10;
   energy = 100;
   dead = false;
-  ball;
+  //ball;
   balls=[];
   isCollectingBombs;
   throw = false;
@@ -90,7 +90,7 @@ class Character extends MoveableObject {
         this.world.keyboard.SPACE = false;
         this.world.keyboard.LEFT=false;
         this.world.keyboard.RIGHT=false
-        this.ball = new Ball(this);
+        //this.ball = new Ball(this);
         this.balls.push(new Ball(this))
 
 
@@ -119,8 +119,7 @@ class Character extends MoveableObject {
       } else if (
         (this.dead == true && !this.isGameover()) ||
         (this.world.level.endboss.dead == true &&
-          !this.world.level.endboss.isGameover())
-      ) {
+          !this.world.level.endboss.isGameover())) {
         this.world.end = true;
         this.world.showStartscreen();
       } else if (this.isHurt()) {
@@ -153,17 +152,8 @@ class Character extends MoveableObject {
   lessBall() {
     this.world.weaponbar.allbombs -= 1;
     console.log(this.world.weaponbar.allbombs);
-    //if ( this.world.weaponbar.allbombs<1){
-    //  this.world.weaponbar.allbombs=0;
-    // }
   }
 }
 
 
 
-/* playAnimation(images){
-    let i=this.current_img % images.length;
-    let path=images[i];
-    this.img=this.imgcache[path];
-    this.current_img++
-    }*/

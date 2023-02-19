@@ -83,17 +83,19 @@ class World {
       }
     });
 
-    if (this.character.ball) {
+    this.character.balls.forEach((ball) =>{
+    if (this.character.balls) {
       if (
-        this.character.ball.isColliding(this.level.endboss) &&
+       ball.isColliding(this.level.endboss) &&
         !this.level.endboss.isHurt()
       ) {
-        this.character.ball.x= this.getBounce();
+        ball.bounce();
         this.level.endboss.hit();
+        console.log(this.level.endboss.energy)
         this.level.endboss.sound_hit.play();
         this.level.endboss.checkDeath();
-      }
-    }
+      }}})
+    
 
     if (this.character.isColliding(this.level.endboss) || this.character.isColliding(this.level.endboss.weapon)) {
       if (!this.character.isHurt()) {
@@ -103,10 +105,10 @@ class World {
     }
   }
 
-  getBounce(){
+  /*getBounce(){
     this.character.x-=10;
     this.character.y-=20
-  }
+  }*/
 
   fromAbove(enemy) {
     if (this.character.speedY < 0 && this.character.y + 50 < enemy.y) {
@@ -155,9 +157,9 @@ class World {
     this.addToMap(this.character);
     this.forEachToMap(this.level.enemies);
     this.addToMap(this.level.endboss);
-    if (this.character.ball) {
-      this.addToMap(this.character.ball);
-    }
+    //if (this.character.ball) {
+     // this.addToMap(this.character.ball);
+    //}
     if (this.character.balls) {
       this.forEachToMap(this.character.balls);
     }

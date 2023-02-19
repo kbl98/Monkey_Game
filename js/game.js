@@ -7,7 +7,7 @@ function init() {
   world = new World(canvas, keyboard);
   console.log("My character is ", world.character);
   checkTouch();
-  setTouchButtons();
+ // setTouchButtons();
 }
 
 function removeStartDisplay() {

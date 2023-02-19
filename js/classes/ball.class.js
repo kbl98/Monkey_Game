@@ -27,5 +27,14 @@ class Ball extends MoveableObject{
     }},1000/30)
     }
 
+   
+    bounce(){
+            this.speedY+=20;
+            if(this.otherDirection==true){
+                this.speed+=20;
+            }else{
+                this.speed-=20;
+            }
+        }
+    }
     
-}

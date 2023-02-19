@@ -37,16 +37,11 @@ IMGS_DEAD=enemy_dead
         }else{
         this.playAnimation(this.IMGS_WALK_EY);
         this.moveLeftMain();
-        //let i=this.current_img % this.IMGS_WALK_EY.length;
-        //let path=this.IMGS_WALK_EY[i];
-        //this.img=this.imgcache[path];
-        //this.current_img++
         }}},1000/60
         )
     }
 
     dieEnemy(){
-        //this.playAnimationOnce(this.IMGS_DEAD);
         this.removeEnemy();
     }
 
