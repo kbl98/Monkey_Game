@@ -4,14 +4,12 @@ class Endboss extends MoveableObject {
   x = 5950;
   energy = 30;
   left = true;
-  sound_hit = new Audio("../audio/endboss_hurt.mp3");
+  sound_hit = new Audio("audio/endboss_hurt.mp3");
   play=true;
-  weapon;
+  weapon="";
 
   IMGS_WALK =endboss_walk
-
   IMGS_Dead = endboss_dead
-
   IMGS_ATTACK =  endboss_attack
 
   constructor() {
@@ -65,8 +63,11 @@ class Endboss extends MoveableObject {
   }
 
   hasBall(){
+    
     setInterval(()=>{
+      if(!this.dead==true){
         this.weapon=new EndbossWeapon(this);
-    },2000)
+      }
+    },1500)
   }
 }

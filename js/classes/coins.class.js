@@ -1,7 +1,7 @@
 class Coin extends MoveableObject {
   width = 80;
   height = 80;
-  sound = new Audio("../audio/collect.mp3");
+  sound = new Audio("audio/collect.mp3");
 
 
   constructor(x, y) {

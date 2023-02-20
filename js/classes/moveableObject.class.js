@@ -16,6 +16,7 @@ class MoveableObject extends DrawableObject {
   deathdate = 0;
   collidable = true;
   dead = false;
+  play=true;
 
   aplyGravity() {
     setInterval(() => {
@@ -67,7 +68,7 @@ class MoveableObject extends DrawableObject {
   }
 
   jump() {
-    this.speedY = 20;
+    this.speedY = 16;
   }
 
   playAnimation(images) {
@@ -137,4 +138,22 @@ class MoveableObject extends DrawableObject {
     let timespan = new Date().getTime() - this.deathdate;
     return timespan / 1000 < 2.5 && timespan / 1000 > 1.5;
   }
+
+  pauseMoves(){
+    this.play=false;
+  }
+
+  moveObj(){
+    this.play=true;
+  }
+
+  enemyIsHit() {
+    this.hit();
+    this.sound_hit.play();
+   this.checkDeath();
+  }
 }
+
+
+
+

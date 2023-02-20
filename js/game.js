@@ -5,10 +5,10 @@ let keyboard = new Keyboard();
 function init() {
   canvas = document.getElementById("canvas");
   world = new World(canvas, keyboard);
-  console.log("My character is ", world.character);
   checkTouch();
- // setTouchButtons();
+  setTouchButtons();
 }
+
 
 function removeStartDisplay() {
   document.getElementById("heading").classList.add("d-none");
@@ -16,24 +16,28 @@ function removeStartDisplay() {
   document.getElementById("startpage").classList.add("d-none");
 }
 
+
 function pause() {
   world.play = false;
 }
+
 
 function play() {
   world.play = true;
 }
 
-window.addEventListener("keydown", (e) => {
-    if (e.keyCode == 80) {
-        keyboard.PAUSE = true;
-        keyboard.PLAY=false;
-      }
 
-      if (e.keyCode == 13) {
-        keyboard.PLAY = true;
-      }
-    
+window.addEventListener("keydown", (e) => {
+  if (e.keyCode == 80) {
+    keyboard.PAUSE = true;
+    keyboard.PLAY = false;
+    document.getElementById("pause-sign").classList.remove("d-none")
+  }
+
+  if (e.keyCode == 13) {
+    keyboard.PLAY = true;
+  }
+
   if (e.keyCode == 40) {
     keyboard.DOWN = true;
   }
@@ -52,11 +56,11 @@ window.addEventListener("keydown", (e) => {
 });
 
 window.addEventListener("keyup", (e) => {
-   
-      if (e.keyCode == 13) {
-        keyboard.PLAY = true;
-        keyboard.PAUSE=false;
-      }
+  if (e.keyCode == 13) {
+    keyboard.PLAY = true;
+    keyboard.PAUSE = false;
+    document.getElementById("pause-sign").classList.add("d-none")
+  }
 
   if (e.keyCode == 40) {
     keyboard.DOWN = false;
@@ -75,6 +79,10 @@ window.addEventListener("keyup", (e) => {
   }
 });
 
+
+/**
+ * Touchbuttons are not displayed if on mobil device
+ */
 function setTouchButtons() {
   if (!isMobile()) {
     document.getElementById("up").classList.add("d-none");
@@ -84,13 +92,17 @@ function setTouchButtons() {
     document.getElementById("space").classList.add("d-none");
     document.getElementById("pause").classList.add("d-none");
     document.getElementById("play").classList.add("d-none");
-    if(isMobile()){
-        document.getElementById("info-play").classList.add("d-none");
+    if (isMobile()) {
+      document.getElementById("info-play").classList.add("d-none");
     }
-
   }
 }
 
+
+/**
+ * Checks device type
+ * @returns true, if on mobil device
+ */
 function isMobile() {
   var check = false;
   (function (a) {
@@ -107,9 +119,10 @@ function isMobile() {
   return check;
 }
 
+/**
+ * Set mobil touchbuttons
+ */
 function checkTouch() {
-        
-
   document.getElementById("down").addEventListener("touchend", (e) => {
     e.preventDefault();
     keyboard.DOWN = false;
@@ -132,17 +145,18 @@ function checkTouch() {
     keyboard.SPACE = false;
   });
 
-
   document.getElementById("pause").addEventListener("touchstart", (e) => {
     e.preventDefault();
     keyboard.PAUSE = true;
-    keyboard.PLAY= false;
+    keyboard.PLAY = false;
+    document.getElementById("pause-sign").classList.remove("d-none")
   });
 
   document.getElementById("play").addEventListener("touchstart", (e) => {
     e.preventDefault();
     keyboard.PAUSE = false;
-    keyboard.PLAY= true;
+    keyboard.PLAY = true;
+    document.getElementById("pause-sign").classList.add("d-none")
   });
 
   document.getElementById("down").addEventListener("touchstart", (e) => {

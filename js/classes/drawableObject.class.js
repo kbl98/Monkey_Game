@@ -1,6 +1,5 @@
 class DrawableObject {
   x;
-
   img;
   height;
   width;

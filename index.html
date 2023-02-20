@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DocumentBattle of Heroes</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wuhang's Battle</title>
     <link
-    rel="icon"
-    type="image/vnd.microsoft.icon"
-    href="https://dr-katja-becker-lindhorst.developerakademie.net/favicon/favicon.ico"
-  />
-    <link rel="stylesheet" href="style.css">
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://dr-katja-becker-lindhorst.developerakademie.net/Game/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://dr-katja-becker-lindhorst.developerakademie.net/Game/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://dr-katja-becker-lindhorst.developerakademie.net/Game/favicon_io/favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="js/levels/images.js"></script>
     <script src="js/classes/drawableObject.class.js"></script>
     <script src="js/classes/moveableObject.class.js"></script>
@@ -27,64 +39,78 @@
     <script src="js/classes/level.class.js"></script>
     <script src="js/classes/endboss.class.js"></script>
     <script src="js/classes/endbossWeapon.class.js"></script>
-    
-
     <script src="js/classes/endscreen.class.js"></script>
     <script src="js/classes/ball.class.js"></script>
     <script src="js/classes/world.class.js"></script>
     <script src="js/levels/level_1.js"></script>
     <script src="js/game.js"></script>
+  </head>
+  <body onload="">
+    <p id="heading" class="">Wuhang`s Battle</p>
+    <div id="startpage" class="start">
+      <img
+        src="../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Characters/Characters 04/Walk/Walk_00.png"
+        id="enemy-img"
+      />
+      <img
+        src="../img/craftpix-net-546825-monkey-game-character-sprite/PNG/Walk/Wukong-Walk_0.png"
+        id="monkey-img"
+      />
+      <img
+        src="../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Characters/Characters 02/Walk/Walk_00.png"
+        id="boss-img"
+      />
 
+      <button class="button" onclick="removeStartDisplay(),init()" id="start">
+        Start game
+      </button>
+    </div>
 
-</head>
-<body onload="">
-        <p id="heading" class=""> Wuhang`s Battle</p>
-        <div id="startpage" class="start" >
-            <img src="../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Characters/Characters 04/Walk/Walk_00.png" id="enemy-img">
-            <img src="../img/craftpix-net-546825-monkey-game-character-sprite/PNG/Walk/Wukong-Walk_0.png" id="monkey-img">
-            <img src="../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Characters/Characters 02/Walk/Walk_00.png" id="boss-img">
-         
-           
-           
-            <button class="button" onclick="removeStartDisplay(),init()" id="start" >Start game</button>
+    <div id="canvas-frame" class="d-none">
+      <canvas id="canvas" width="720" height="480" class=""> </canvas>
+
+      <div id="pause-cont">
+        <div class="movebutton" id="pause"><img src="../img/pause.png" /></div>
+        <div class="movebutton" id="play"><img src="../img/play.png" /></div>
+      </div>
+
+      <div class="movebutton-cont">
+        <div class="cont-side">
+          <div class="movebutton" id="left">
+            <img src="../img/arrow_left.png" />
+          </div>
+          <div class="movebutton" id="up">
+            <img src="../img/arrow_up.png" />
+          </div>
         </div>
-       
-       
- 
 
-   <div id="canvas-frame" class="d-none">
-    <canvas id="canvas" width="720" height="480" class="">
-       
-    </canvas>
+        <div class="movebutton" id="space">THROW</div>
+        <div class="cont-side">
+          <div class="movebutton" id="down">
+            <img src="../img/arrow_down.png" />
+          </div>
+          <div class="movebutton" id="right">
+            <img src="../img/arrow_right.png" />
+          </div>
+        </div>
+      </div>
 
-    <div id="pause-cont">
-        <div class="movebutton" id="pause" ><img src="../img/pause.png"></div>
-        <div class="movebutton" id="play" ><img src="../img/play.png"></div>
+      <div id="pause-sign" class="d-none">
+        <img src="../img/pause.png" class="" />
+      </div>
     </div>
 
-   <div class="movebutton-cont">
-    <div class="cont-side">
-        <div class="movebutton" id="left"><img src="../img/arrow_left.png"></div>
-        <div class="movebutton" id="up"><img src="../img/arrow_up.png"></div>
-        
+    <div id="info-play">
+      <div class="cont-direction">
+        <span>LEFT: Pfeiltaste links</span>
+        <span>RIGHT: Pfeiltaste rechts </span>
+        <span> UP: Pfeiltaste nach oben </span>
+        <span>DOWN: Pfeiltaste nach unten</span>
+      </div>
+      <div class="cont-direction">
+        <span>SAMMELN: Pfeiltaste unten </span> <span>Pause:"p"</span>
+        <span>Play:"Enter"</span> <span>WERFEN: Spacetaste</span>
+      </div>
     </div>
-
-    <div class="movebutton" id="space" >THROW</div>
-    <div class="cont-side">
-        <div class="movebutton" id="down"><img src="../img/arrow_down.png"></div>
-        <div class="movebutton" id="right"><img src="../img/arrow_right.png"></div>
-        
-       
-    </div>
-    </div>
-</div>
-
-<div id="info-play">
-    <div class="cont-direction"> <span>LEFT: Pfeiltaste links</span>       <span>RIGHT: Pfeiltaste rechts </span>     <span> UP: Pfeiltaste nach oben </span> <span>DOWN: Pfeiltaste nach unten</span></div>
-    <div class="cont-direction"> <span>SAMMELN: Pfeiltaste unten </span>     <span>Pause:"p"</span>   <span>Play:"Enter"</span>    <span>WERFEN: Spacetaste</span></div>
-</div>
-
-    
-    
-</body>
+  </body>
 </html>
