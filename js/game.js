@@ -7,8 +7,8 @@ function init() {
   world = new World(canvas, keyboard);
   checkTouch();
   setTouchButtons();
+  document.getElementById("fullscreen").classList.remove("d-none");
 }
-
 
 function removeStartDisplay() {
   document.getElementById("heading").classList.add("d-none");
@@ -16,22 +16,85 @@ function removeStartDisplay() {
   document.getElementById("startpage").classList.add("d-none");
 }
 
-
 function pause() {
   world.play = false;
 }
-
 
 function play() {
   world.play = true;
 }
 
+function audio() {
+  let audio = document.getElementById("audio");
+  if (audio.getAttribute("src") == "../img/audio_on.png") {
+    audio.setAttribute("src", "../img/audio_off.png");
+    world.audio = false;
+    console.log(world.audio);
+  } else {
+    audio.setAttribute("src", "../img/audio_on.png");
+    world.audio = true;
+  }
+}
+
+function audiotouch() {
+  let audio = document.getElementById("audio");
+  if (audio.getAttribute("src") == "../img/audio_on.png") {
+    audio.setAttribute("src", "../img/audio_off.png");
+  } else {
+    audio.setAttribute("src", "../img/audio_on.png");
+  }
+}
+
+function fullscreen() {
+  let elem = document.getElementById("content");
+  getFullscreen(elem);
+}
+
+function getFullscreen(elem) {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) {
+    /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+function exitFullscreen(elem) {
+  if (elem.exitFullscreen) {
+    elem.exitFullscreen();
+  } else if (elem.webkitExitFullscreen) {
+    /* Safari */
+    elem.webkitExitFullscreen();
+  } else if (elem.msExitFullscreen) {
+    /* IE11 */
+    elem.msExitFullscreen();
+  }
+}
+
+/*function toggleScreenImage(){
+  let fullscreen=document.getElementById("fullscreen");
+  if(fullscreen.getAttribute("src")=="img/fullscreen.png"){
+  fullscreen.setAttribute("src","img/small.png")
+}else
+{fullscreen.setAttribute("src","img/fullscreen.png")};
+}*/
 
 window.addEventListener("keydown", (e) => {
+  if (e.keyCode == 77) {
+    if (keyboard.AUDIO == true) {
+      keyboard.AUDIO = false;
+    } else {
+      keyboard.AUDIO = true;
+    }
+  }
+
   if (e.keyCode == 80) {
     keyboard.PAUSE = true;
     keyboard.PLAY = false;
-    document.getElementById("pause-sign").classList.remove("d-none")
+    document.getElementById("pause-sign").classList.remove("d-none");
   }
 
   if (e.keyCode == 13) {
@@ -59,7 +122,7 @@ window.addEventListener("keyup", (e) => {
   if (e.keyCode == 13) {
     keyboard.PLAY = true;
     keyboard.PAUSE = false;
-    document.getElementById("pause-sign").classList.add("d-none")
+    document.getElementById("pause-sign").classList.add("d-none");
   }
 
   if (e.keyCode == 40) {
@@ -79,7 +142,6 @@ window.addEventListener("keyup", (e) => {
   }
 });
 
-
 /**
  * Touchbuttons are not displayed if on mobil device
  */
@@ -92,12 +154,13 @@ function setTouchButtons() {
     document.getElementById("space").classList.add("d-none");
     document.getElementById("pause").classList.add("d-none");
     document.getElementById("play").classList.add("d-none");
+    document.getElementById("audio").classList.add("d-none");
+
     if (isMobile()) {
       document.getElementById("info-play").classList.add("d-none");
     }
   }
 }
-
 
 /**
  * Checks device type
@@ -149,14 +212,14 @@ function checkTouch() {
     e.preventDefault();
     keyboard.PAUSE = true;
     keyboard.PLAY = false;
-    document.getElementById("pause-sign").classList.remove("d-none")
+    document.getElementById("pause-sign").classList.remove("d-none");
   });
 
   document.getElementById("play").addEventListener("touchstart", (e) => {
     e.preventDefault();
     keyboard.PAUSE = false;
     keyboard.PLAY = true;
-    document.getElementById("pause-sign").classList.add("d-none")
+    document.getElementById("pause-sign").classList.add("d-none");
   });
 
   document.getElementById("down").addEventListener("touchstart", (e) => {
@@ -179,5 +242,16 @@ function checkTouch() {
   document.getElementById("space").addEventListener("touchstart", (e) => {
     e.preventDefault();
     keyboard.SPACE = true;
+  });
+
+  document.getElementById("audio").addEventListener("touchstart", (e) => {
+    e.preventDefault();
+
+    if (keyboard.AUDIO == true) {
+      keyboard.AUDIO = false;
+    } else {
+      keyboard.AUDIO = true;
+    }
+    audiotouch();
   });
 }

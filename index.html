@@ -46,7 +46,10 @@
     <script src="js/game.js"></script>
   </head>
   <body onload="">
+    <div id="content">
     <p id="heading" class="">Wuhang`s Battle</p>
+    <img id="fullscreen" src="../img/fullscreen.png" class="d-none" onclick="fullscreen()">
+
     <div id="startpage" class="start">
       <img
         src="../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Characters/Characters 04/Walk/Walk_00.png"
@@ -72,6 +75,9 @@
       <div id="pause-cont">
         <div class="movebutton" id="pause"><img src="../img/pause.png" /></div>
         <div class="movebutton" id="play"><img src="../img/play.png" /></div>
+        
+            <img src="../img/audio_on.png" class="" id="audio" onclick="audio()"/>
+          
       </div>
 
       <div class="movebutton-cont">
@@ -98,6 +104,10 @@
       <div id="pause-sign" class="d-none">
         <img src="../img/pause.png" class="" />
       </div>
+
+      
+
+     <!--<img id="fullscreen" src="img/fullscreen.png" onclick="fullscreen()">-->
     </div>
 
     <div id="info-play">
@@ -110,7 +120,9 @@
       <div class="cont-direction">
         <span>SAMMELN: Pfeiltaste unten </span> <span>Pause:"p"</span>
         <span>Play:"Enter"</span> <span>WERFEN: Spacetaste</span>
+        <span>Audio on/off: "m"</span>
       </div>
     </div>
+</div>
   </body>
 </html>

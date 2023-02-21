@@ -157,8 +157,8 @@ class Character extends MoveableObject {
 
   standStill() {
     this.playAnimation(this.IMGS_IDLE);
-    this.sound_birds.play();
-  }
+    this.sound_birds.play()}
+   
 
   hasBall() {
     return this.world.weaponbar.allbombs > 0;

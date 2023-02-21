@@ -16,6 +16,7 @@ class World {
   weaponbar = new Weaponbar();
   endscreen = new Endscreen();
   play = true;
+  audio = true;
 
   constructor(canvas, keyboard) {
     this.canvas = canvas;
@@ -29,6 +30,7 @@ class World {
     this.writeStatusbar();
     this.pauseGame();
     this.setPlay();
+    this.setAudio();
   }
 
   setWorld() {
@@ -100,8 +102,6 @@ class World {
       }
     });
   }
-
- 
 
   checkCollisionEndboss() {
     if (
@@ -237,5 +237,44 @@ class World {
 
   playAudio() {
     this.character.sound_birds.play();
+  }
+
+  setAudio() {
+    setInterval(() => {
+      if (this.keyboard.AUDIO == false) {
+        this.audio = false;
+      } else {
+        this.audio = true;
+      }
+      this.muteAudio();
+    }, 1000 / 60);
+  }
+
+  muteAudio() {
+    if (this.audio == false) {
+      this.character.sound_birds.volume = 0;
+      this.character.sound_jump.volume = 0;
+      this.character.sound_hurt.volume = 0;
+      this.character.sound_die.volume = 0;
+      this.character.sound_throw.volume = 0;
+      this.character.sound_collect_weapon.volume = 0;
+      this.character.sound_walk.volume = 0;
+      this.character.sound_win.volume = 0;
+      this.level.endboss.sound_hit.volume = 0;
+      this.level.coins.forEach((c) => (c.sound.volume = 0));
+      this.level.enemies.forEach((e) => (e.sound_hit.volume = 0));
+    } else {
+      this.character.sound_birds.volume = 1;
+      this.character.sound_jump.volume = 1;
+      this.character.sound_hurt.volume = 1;
+      this.character.sound_die.volume = 1;
+      this.character.sound_throw.volume = 1;
+      this.character.sound_collect_weapon.volume = 1;
+      this.character.sound_walk.volume = 1;
+      this.character.sound_win.volume = 1;
+      this.level.endboss.sound_hit.volume = 1;
+      this.level.coins.forEach((c) => (c.sound.volume = 1));
+      this.level.enemies.forEach((e) => (e.sound_hit.volume = 1));
+    }
   }
 }

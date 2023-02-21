@@ -7,7 +7,7 @@ class Keyboard{
     SPACE=false;
     PAUSE=false;
     PLAY=true;
-
+    AUDIO=true;
 
 
 
