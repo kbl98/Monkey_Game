@@ -9,6 +9,7 @@ class Bomb extends MoveableObject {
       "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Projectile/4.png"
     );
     this.x = x;
+   
     // this.animate();
   }
 

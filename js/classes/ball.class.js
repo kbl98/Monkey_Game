@@ -12,7 +12,8 @@ class Ball extends MoveableObject{
         this.y=character.y + 50;
         this.aplyGravity()
         this.throw();
-        this.otherDirection=character.otherDirection
+        this.otherDirection=character.otherDirection;
+       
     }
 
 

@@ -22,7 +22,10 @@ class Endboss extends MoveableObject {
     this.width = 280;
     this.y = 130;
     this.x = 5950;
-
+    this.offset.bottom=0;
+    this.offset.top=0;
+    this.offset.left=0;
+    this.offset.right=0;
     this.loadImgs(this.IMGS_WALK);
     this.animate();
     this.hasBall();

@@ -5,6 +5,8 @@ class MoveableObject extends DrawableObject {
   height = 100;
   width = 110;
   y = 270;
+  offset=[];
+
   imgcache = [];
   speed;
   otherDirection = false;
@@ -98,8 +100,8 @@ class MoveableObject extends DrawableObject {
 
   isColliding(obj) {
     return (
-      this.x + this.width-20 > obj.x &&
-      this.x+20 < obj.x &&
+      this.x + this.width-10 > obj.x &&
+      this.x+10 < obj.x &&
       this.y + this.height - 20 > obj.y &&
       this.y + 20 < obj.y + obj.height
     );
