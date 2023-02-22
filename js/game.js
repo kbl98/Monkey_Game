@@ -8,6 +8,7 @@ function init() {
   checkTouch();
   setTouchButtons();
   document.getElementById("fullscreen").classList.remove("d-none");
+  world.play=true;
 }
 
 function removeStartDisplay() {

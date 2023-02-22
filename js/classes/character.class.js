@@ -152,6 +152,9 @@ class Character extends MoveableObject {
     }, 1000 / 30);
   }
 
+
+
+
   animationThrow() {
     this.playAnimation(this.IMGS_THROW);
     this.sound_throw.play();
@@ -241,4 +244,5 @@ class Character extends MoveableObject {
   isEnd() {
     return this.isDead() || this.world.level.endboss.isDead();
   }
+
 }

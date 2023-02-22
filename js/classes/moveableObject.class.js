@@ -18,7 +18,7 @@ class MoveableObject extends DrawableObject {
   deathdate = 0;
   collidable = true;
   dead = false;
-  play=true;
+  play=false;
 
   aplyGravity() {
     setInterval(() => {

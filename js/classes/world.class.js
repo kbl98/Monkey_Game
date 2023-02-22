@@ -15,7 +15,7 @@ class World {
   coinbar = new Coinbar();
   weaponbar = new Weaponbar();
   endscreen = new Endscreen();
-  play = true;
+  play = false;
   audio = true;
 
   constructor(canvas, keyboard) {
@@ -31,6 +31,7 @@ class World {
     this.pauseGame();
     this.setPlay();
     this.setAudio();
+    this.checkDeathCharacter()
   }
 
   setWorld() {
@@ -85,11 +86,15 @@ class World {
         if (this.fromAbove(enemy)) {
           enemy.enemyIsHit();
           this.character.y = 100;
-        } else if (!this.character.isHurt()) {
+        } else if (this.characterIsCollidable()) {
           this.characterIsHit();
         }
       }
     });
+  }
+
+  characterIsCollidable(){
+    return !this.character.isHurt() && !this.character.isDead();
   }
 
   checkCollisionBalls(enemy) {
@@ -108,7 +113,7 @@ class World {
       this.character.isColliding(this.level.endboss) ||
       this.character.isColliding(this.level.endboss.weapon)
     ) {
-      if (!this.character.isHurt()) {
+      if (this.characterIsCollidable()) {
         this.characterIsHit();
       }
     }
@@ -206,9 +211,7 @@ class World {
       if (this.play == false) {
         this.pauseAudio();
         this.character.pauseMoves();
-        this.level.enemies.forEach((enemy) => {
-          enemy.pauseMoves();
-        });
+        this.pauseMovesEnemies();
         this.level.endboss.pauseMoves();
       } else {
         this.playAudio();
@@ -278,6 +281,20 @@ class World {
     }
   }
 
-  
+  pauseMovesEnemies(){
+    this.level.enemies.forEach((enemy) => {
+      enemy.pauseMoves();
+    });
+  }
+
+  checkDeathCharacter(){
+    setInterval(()=>{
+      if(this.character.isDead()){
+        this.level.enemies.forEach((enemy) => {
+          enemy.play=false;
+
+        })}},1000/60)
+    
+  }
 
 }
