@@ -6,7 +6,7 @@ class Bomb extends MoveableObject {
 
   constructor(x) {
     super().loadImg(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Projectile/4.png"
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Projectile/4.png"
     );
     this.x = x;
    

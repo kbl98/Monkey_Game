@@ -14,7 +14,7 @@ class Endboss extends MoveableObject {
 
   constructor() {
     super().loadImg(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Characters/Characters 02/Walk/Walk_00.png"
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Characters/Characters 02/Walk/Walk_00.png"
     );
     this.loadImgs(this.IMGS_ATTACK);
     this.loadImgs(this.IMGS_Dead);

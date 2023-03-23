@@ -6,18 +6,18 @@ class Statusbar extends DrawableObject {
   persentage = 100;
 
   images = [
-    "../img/img 4/7_statusbars/1_statusbar/2_statusbar_health/blue/0.png",
-    "../img/img 4/7_statusbars/1_statusbar/2_statusbar_health/blue/20.png",
-    "../img/img 4/7_statusbars/1_statusbar/2_statusbar_health/blue/40.png",
-    "../img/img 4/7_statusbars/1_statusbar/2_statusbar_health/blue/60.png",
-    "../img/img 4/7_statusbars/1_statusbar/2_statusbar_health/blue/80.png",
-    "../img/img 4/7_statusbars/1_statusbar/2_statusbar_health/blue/100.png"
+    "img/img 4/7_statusbars/1_statusbar/2_statusbar_health/blue/0.png",
+    "img/img 4/7_statusbars/1_statusbar/2_statusbar_health/blue/20.png",
+    "img/img 4/7_statusbars/1_statusbar/2_statusbar_health/blue/40.png",
+    "img/img 4/7_statusbars/1_statusbar/2_statusbar_health/blue/60.png",
+    "img/img 4/7_statusbars/1_statusbar/2_statusbar_health/blue/80.png",
+    "img/img 4/7_statusbars/1_statusbar/2_statusbar_health/blue/100.png"
   ];
 
   constructor() {
     super().loadImgs(this.images);
     this.loadImg(
-      "../img/img 4/7_statusbars/1_statusbar/2_statusbar_health/blue/100.png"
+      "img/img 4/7_statusbars/1_statusbar/2_statusbar_health/blue/100.png"
     );
   }
 

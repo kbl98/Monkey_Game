@@ -27,22 +27,22 @@ function play() {
 
 function audio() {
   let audio = document.getElementById("audio");
-  if (audio.getAttribute("src") == "../img/audio_on.png") {
-    audio.setAttribute("src", "../img/audio_off.png");
+  if (audio.getAttribute("src") == "img/audio_on.png") {
+    audio.setAttribute("src", "img/audio_off.png");
     world.audio = false;
     console.log(world.audio);
   } else {
-    audio.setAttribute("src", "../img/audio_on.png");
+    audio.setAttribute("src", "img/audio_on.png");
     world.audio = true;
   }
 }
 
 function audiotouch() {
   let audio = document.getElementById("audio");
-  if (audio.getAttribute("src") == "../img/audio_on.png") {
-    audio.setAttribute("src", "../img/audio_off.png");
+  if (audio.getAttribute("src") == "img/audio_on.png") {
+    audio.setAttribute("src", "img/audio_off.png");
   } else {
-    audio.setAttribute("src", "../img/audio_on.png");
+    audio.setAttribute("src", "img/audio_on.png");
   }
 }
 

@@ -2,112 +2,112 @@ const level_1 = new Level(
   [new Cloud(), new Cloud(), new Cloud(), new Cloud()],
   [
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer04.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer04.png",
       0,
       0,
       1000,
       480
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer03.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer03.png",
       0,
       220,
       1000,
       250
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer02.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer02.png",
       0,
       50,
       1000,
       360
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer01.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer01.png",
       0,
       360,
       1000,
       120
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer04.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer04.png",
       999,
       0,
       1000,
       480
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer03.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer03.png",
       999,
       220,
       1000,
       250
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer02.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer02.png",
       999,
       50,
       1000,
       360
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer01.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer01.png",
       999,
       360,
       1000,
       120
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer04.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer04.png",
       1998,
       0,
       1000,
       480
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer03.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer03.png",
       1998,
       220,
       1000,
       250
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer02.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer02.png",
       1998,
       50,
       1000,
       360
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer01.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer01.png",
       1998,
       360,
       1000,
       120
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer04.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer04.png",
       2997,
       0,
       1000,
       480
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer03.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer03.png",
       2997,
       220,
       1000,
       250
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer02.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer02.png",
       2997,
       50,
       1000,
       360
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer01.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer01.png",
       2997,
       360,
       1000,
@@ -115,7 +115,7 @@ const level_1 = new Level(
     ),
 
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Barrack/Lvl2_ori.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Barrack/Lvl2_ori.png",
       2997,
       270,
       100,
@@ -123,84 +123,84 @@ const level_1 = new Level(
     ),
 
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer04.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer04.png",
       3996,
       0,
       1000,
       480
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer03.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer03.png",
       3996,
       220,
       1000,
       250
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer02.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer02.png",
       3996,
       50,
       1000,
       360
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer01.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer01.png",
       3996,
       360,
       1000,
       120
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer04.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer04.png",
       4995,
       0,
       1000,
       480
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer03.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer03.png",
       4995,
       220,
       1000,
       250
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer02.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer02.png",
       4995,
       50,
       1000,
       360
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer01.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer01.png",
       4995,
       360,
       1000,
       120
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer04.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer04.png",
       5994,
       0,
       1000,
       480
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer03.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer03.png",
       5994,
       220,
       1000,
       250
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer02.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer02.png",
       5994,
       50,
       1000,
       360
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer01.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer01.png",
       5994,
       360,
       1000,
@@ -208,7 +208,7 @@ const level_1 = new Level(
     ),
 
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Barrack/Lvl2_ori.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Barrack/Lvl2_ori.png",
       5994,
       270,
       100,
@@ -216,56 +216,56 @@ const level_1 = new Level(
     ),
 
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer04.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer04.png",
       6993,
       0,
       1000,
       480
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer03.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer03.png",
       6993,
       220,
       1000,
       250
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer02.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer02.png",
       6993,
       50,
       1000,
       360
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer01.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer01.png",
       6993,
       360,
       1000,
       120
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer04.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer04.png",
       7992,
       0,
       1000,
       480
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer03.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer03.png",
       7992,
       220,
       1000,
       250
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer02.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer02.png",
       7992,
       50,
       1000,
       360
     ),
     new BackgroundObject(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer01.png",
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Stage Backgrounds/Background03/Layer01.png",
       7992,
       360,
       1000,

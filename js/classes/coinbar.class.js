@@ -9,7 +9,7 @@ class Coinbar extends DrawableObject {
 
   constructor() {
     super().loadImg(
-        "../img/img 4/8_coin/coin_1.png"
+        "img/img 4/8_coin/coin_1.png"
       );
    }
 

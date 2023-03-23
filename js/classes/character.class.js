@@ -22,7 +22,7 @@ class Character extends MoveableObject {
   sound_walk = new Audio("audio/walk.mp3");
 
   IMGS_IDLE = [
-    "../img/craftpix-net-546825-monkey-game-character-sprite/PNG/Walk/Wukong-Walk_0.png",
+    "img/craftpix-net-546825-monkey-game-character-sprite/PNG/Walk/Wukong-Walk_0.png",
   ];
 
   IMGS_WALK = character_walk;
@@ -35,12 +35,12 @@ class Character extends MoveableObject {
   IMGS_GLIDE = character_glide;
 
   IMG_Fireball =
-    "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Projectile/1.png";
+    "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Projectile/1.png";
 
   constructor() {
     super();
     this.loadImg(
-      "../img/craftpix-net-546825-monkey-game-character-sprite/PNG/Walk/Wukong-Walk_0.png"
+      "img/craftpix-net-546825-monkey-game-character-sprite/PNG/Walk/Wukong-Walk_0.png"
     );
     this.loadImgs(this.IMGS_WALK);
     this.loadImgs(this.IMGS_JUMP);

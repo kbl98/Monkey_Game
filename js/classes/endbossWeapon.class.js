@@ -8,7 +8,7 @@ class EndbossWeapon extends MoveableObject {
 
   constructor(character) {
     super().loadImg(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Projectile/1.png"
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Projectile/1.png"
     );
     this.x = this.getX(character);
     this.y = character.y + 120;

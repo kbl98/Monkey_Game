@@ -7,10 +7,11 @@ class Enemy extends MoveableObject {
   sound_hit = new Audio("audio/hit_enemy.mp3");
   IMGS_WALK_EY = enemy_walk;
   IMGS_DEAD = enemy_dead;
+  intervalEnemy;
 
   constructor(character) {
     super().loadImg(
-      "../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Characters/Characters 04/Idle/Idle_00.png"
+      "img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Characters/Characters 04/Idle/Idle_00.png"
     );
     this.x = 1020 + Math.random() * 4500;
     this.speed = 0.35 + Math.random() * 0.45;
@@ -18,24 +19,18 @@ class Enemy extends MoveableObject {
     this.animate();
   }
 
-  
-
   animate() {
-   setInterval(()=>{
-    console.log("enemy" + this.play)
-    if (this.play == true) {
+    setInterval(() => {
+      if (this.play == true) {
         if (this.dead == true) {
           this.dieEnemy();
         } else {
-            this.playAnimation(this.IMGS_WALK_EY);
+          this.playAnimation(this.IMGS_WALK_EY);
           this.moveLeftMain();
         }
       }
-  }, 1000/60);
+    }, 1000 / 60);
   }
-
-
-
 
   dieEnemy() {
     this.removeEnemy();
@@ -46,6 +41,4 @@ class Enemy extends MoveableObject {
       this.y += 6000;
     }
   }
-
-  
 }

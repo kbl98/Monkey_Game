@@ -7,7 +7,7 @@ class Ball extends MoveableObject{
     play=true
     constructor(character){
         
-        super().loadImg("../img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Projectile/4.png");
+        super().loadImg("img/craftpix-891176-battle-of-heroes-2d-game-kit/Png/Projectile/4.png");
         this.x=character.x + 40;
         this.y=character.y + 50;
         this.aplyGravity()

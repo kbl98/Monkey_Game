@@ -5,6 +5,6 @@ class Endscreen extends DrawableObject{
     width=720;
 
     constructor(){
-        super(). loadImg("../img/img 4/9_intro_outro_screens/game_over/game over.png")
+        super(). loadImg("img/img 4/9_intro_outro_screens/game_over/game over.png")
     }
 }
